@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GalleryBot Server 📡</title>
+  <title>ArtBot Server 🌻</title>
 </head>
 <style>
   body {
@@ -14,59 +14,217 @@
     margin-left: auto;
     width: 500px;
   }
-
   h1 {
     border: 2px dotted white;
     margin-bottom: 5px;
     font-weight: 100;
     font-size: 45px;
   }
-
   h2 {
     font-weight: 100;
   }
-
   hr {
     border-top: 1px dashed black;
     border-bottom: none;
     margin-bottom: 35px;
     margin-top: 35px;
   }
-
   img {
-    width: 450px;
+    width: 425px;
+  }
+  textarea {
+    width: 500px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  summary, button, #upload > input, #edit > input {
+    cursor: pointer;
   }
 </style>
 
 <body>
 
-  <h1>GalleryBot Server 📡</h1>
-  <a href="./art.html">view art</a> /
-  <a href="./upload.html">upload art</a> /
-  <a href="./edit.html">edit this page</a>
+  <h1>ArtBot Server 🌻</h1>
+
+  <a href="#upload">upload files</a> / 
+  <a href="#">download thing</a> / 
+  <!-- <a href="#edit">edit page</a> / -->
+  <a href="#">github</a>
 
   <ul>
-    <li>a random computer under my desk</li>
-    <li>freely upload art / music / zines / videos etc</li>
-    <li>automated gallerybot displays / plays / prints uploaded files</li>
-    <li>gallerybot instance can be installed by anyone anywhere</li>
-    <li>art can be uploaded by anyone / anywhere</li>
-    <li>scalable / sustainable / accessible / free</li>
-    <li>ps you can freely edit this website</li>
+    <li>this site lives on a computer under my desk</li>
+    <li>sends art things to irl gallery bots installed in irl locations</li>
+    <li>upload any music / image / text files etc you want</li>
+    <li>download art things that will never exist again</li>
+    <li>stuff goes in weird art comes out</li>
+    <li>also you can edit this page!</li>
+
+    <!-- <li>controls gallery bot / bots in random locations</li> -->
+    <!-- <li>gallery bots have monitors / printers / webcams etc</li> -->
+    <!-- <li>also you can do whatever you want to this page</li> -->
+
+    <!-- <li>this website lives on a random computer under my desk</li> -->
+    <!-- <li>freely upload art / music / zines / videos etc</li> -->
+    <!-- <li>automated gallerybot displays / plays / prints uploaded files</li> -->
+    <!-- <li>gallerybot instance can be installed by anyone anywhere</li> -->
+    <!-- <li>art can be uploaded by anyone / anywhere</li> -->
+    <!-- <li>scalable / sustainable / accessible / free</li> -->
+    <!-- <li>ps you can freely edit this website</li> -->
   </ul>
 
   <hr>
-
+  
   <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF9tGip45Q830wVDimG-mVghfuT-Y-7HkJk1Wz5f-2j1BV6bJ-Uw1pVgjHjWby02ayEc&usqp=CAU" />
-  <p>GalleryBot Selfie →
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF9tGip45Q830wVDimG-mVghfuT-Y-7HkJk1Wz5f-2j1BV6bJ-Uw1pVgjHjWby02ayEc&usqp=CAU" />
+  <p>GalleryBot Selfie [gif] →
     <webcam-time />
   </p>
   <button id="refresh-webcam">refresh webcam</button>
+  
+  <hr>
 
+  <form id="upload">
+    <input type="submit" value="Upload"/>
+    <input type="file"/>
+  </form>
+  <ul>
+    <li><a href="#">upload-1665549113</a></li>
+    <li><a href="#">upload-1665549235</a></li>
+    <li><a href="#">upload-1665545463</a></li>
+    <li><a href="#">upload-1665534654</a></li>
+    <li><a href="#">upload-1665462343</a></li>
+  </ul>
+  <button>delete all</button>
+
+  <hr>
+
+  <details id="edit">
+    <summary>edit page</summary>
+    <form>
+      <textarea rows="35"></textarea>
+      <input type="submit" value="save edits" />
+    </form>
+  </details>
 </body>
 <script>
   document.querySelector("webcam-time").innerHTML = "10/11/22 09:22 AM";
-</script>
+  
+  const html = `
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtBot Server 🌻</title>
+</head>
+<style>
+  body {
+    margin-bottom: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+  }
+  h1 {
+    border: 2px dotted white;
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 45px;
+  }
+  h2 {
+    font-weight: 100;
+  }
+  hr {
+    border-top: 1px dashed black;
+    border-bottom: none;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  img {
+    width: 425px;
+  }
+    textarea {
+    height: 70vh;
+    width: 97.5%;
+    margin-bottom: 10px;
+  }
+  details {
+    /* font-size: 14px; */
+    margin-top: 25px;
+  }
+</style>
+
+<body>
+
+  <h1>ArtBot Server 🌻</h1>
+
+  <a href="#upload-form">upload files</a> →
+  <a href="./art.html">download thing</a> →
+  <a href="./edit.html">edit page</a>
+
+  <ul>
+    <li>this site lives on a computer under my desk</li>
+    <li>sends art things to irl gallerybot / bots in random locations</li>
+    <li>upload any music / image / text files etc you want</li>
+    <li>download art things that will never exist again</li>
+    <li>stuff goes in weird art comes out</li>
+    <li>also you can edit this page</li>
+
+    <!-- <li>controls gallery bot / bots in random locations</li> -->
+    <!-- <li>gallery bots have monitors / printers / webcams etc</li> -->
+    <!-- <li>also you can do whatever you want to this page</li> -->
+
+    <!-- <li>this website lives on a random computer under my desk</li> -->
+    <!-- <li>freely upload art / music / zines / videos etc</li> -->
+    <!-- <li>automated gallerybot displays / plays / prints uploaded files</li> -->
+    <!-- <li>gallerybot instance can be installed by anyone anywhere</li> -->
+    <!-- <li>art can be uploaded by anyone / anywhere</li> -->
+    <!-- <li>scalable / sustainable / accessible / free</li> -->
+    <!-- <li>ps you can freely edit this website</li> -->
+  </ul>
+
+  <hr>
+  
+  <img
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF9tGip45Q830wVDimG-mVghfuT-Y-7HkJk1Wz5f-2j1BV6bJ-Uw1pVgjHjWby02ayEc&usqp=CAU" />
+  <p>GalleryBot Selfie [gif] →
+    <webcam-time />
+  </p>
+  <button id="refresh-webcam">refresh webcam</button>
+  
+  <hr>
+
+  <!-- <h2>Upload Stuff</h2> -->
+  <form id="upload-form">
+    <input type="submit" value="Upload"/>
+    <input type="file"/>
+  </form>
+  <ul>
+    <!-- <li><a href="#">screaming-green-birds</a></li> -->
+    <!-- <li><a href="#">crystal-cat-mountain</a></li> -->
+    <!-- <li><a href="#">inside-out-space-dogs</a></li> -->
+    <li><a href="#">upload-1665549113</a></li>
+    <li><a href="#">upload-1665549235</a></li>
+    <li><a href="#">upload-1665545463</a></li>
+    <li><a href="#">upload-1665534654</a></li>
+    <li><a href="#">upload-1665462343</a></li>
+  </ul>
+  <button>delete all</button>
+
+  <hr>
+
+  <details>
+    <summary>edit page</summary>
+    <form>
+      <textarea rows="35"></textarea>
+      <input type="submit" value="save edits" />
+      <a href="./index.html">cancel</a>
+    </form>
+  </details>
+</body>
+</html>`;
+  
+  document.querySelector("textarea").innerHTML = html;
+</script>
 </html>
