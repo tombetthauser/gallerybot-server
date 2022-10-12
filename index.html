@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GalleryBot Server 📡</title>
+</head>
+<style>
+  body {
+    margin-bottom: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+  }
+
+  h1 {
+    border: 2px dotted white;
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 50px;
+  }
+
+  h2 {
+    font-weight: 100;
+  }
+
+  hr {
+    border-top: 1px dashed black;
+    border-bottom: none;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+
+  img {
+    width: 450px;
+  }
+</style>
+
+<body>
+
+  <h1>GalleryBot Server 📡</h1>
+  <a href="./art.html">view art</a> /
+  <a href="./upload.html">upload art</a> /
+  <a href="./edit.html">edit this page</a>
+
+  <ul>
+    <li>a random computer under my desk</li>
+    <li>freely upload art / music / zines / videos etc</li>
+    <li>automated gallerybot displays / plays / prints uploaded files</li>
+    <li>gallerybot instance can be installed by anyone anywhere</li>
+    <li>art can be uploaded by anyone / anywhere</li>
+    <li>scalable / sustainable / accessible / free</li>
+    <li>ps you can freely edit this website</li>
+  </ul>
+
+  <hr>
+
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF9tGip45Q830wVDimG-mVghfuT-Y-7HkJk1Wz5f-2j1BV6bJ-Uw1pVgjHjWby02ayEc&usqp=CAU" />
+  <p>GalleryBot Selfie →
+    <webcam-time />
+  </p>
+  <button id="refresh-webcam">refresh webcam</button>
+
+</body>
+<script>
+  document.querySelector("webcam-time").innerHTML = "10/11/22 09:22 AM";
+</script>
+
+</html>
